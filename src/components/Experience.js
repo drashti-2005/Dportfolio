@@ -192,9 +192,9 @@ const Experience = () => {
               variants={itemVariants}
               className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center"
             >
-              <h4 className="text-2xl font-bold text-white mb-3">Let's Build Something Great Together!</h4>
+              <h4 className="text-2xl font-bold text-white mb-3">Let&apos;s Build Something Great Together!</h4>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                I'm eager to join a team where I can contribute my skills, learn from experienced professionals, 
+                I&apos;m eager to join a team where I can contribute my skills, learn from experienced professionals, 
                 and grow as a developer.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

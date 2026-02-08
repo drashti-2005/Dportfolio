@@ -75,7 +75,7 @@ const Achievements = () => {
       date: '2025',
       icon: '🔧',
       category: 'Development Tools',
-      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      link: ' https://www.udemy.com/certificate/UC-48ec26f0-7ec2-4d36-b48c-7c226756b65e/',
       gradient: 'from-gray-700 to-gray-900',
       badgeColor: 'bg-gray-100 text-gray-800 dark:bg-gray-900/50 dark:text-gray-400'
     },
@@ -237,10 +237,11 @@ const Achievements = () => {
                       href={achievement.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center justify-center space-x-2 w-full py-3 px-4 bg-gradient-to-r ${achievement.gradient} text-white font-medium rounded-xl rounded-xl`}
+                      className={`inline-flex items-center justify-center space-x-2 w-full py-3 px-4 bg-gradient-to-r ${achievement.gradient} text-white font-medium rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300`}
                     >
                       <FaCertificate className="w-4 h-4" />
                       <span>View Certificate</span>
+                      <FaExternalLinkAlt className="w-3 h-3 ml-1" />
                     </a>
                   )}
 

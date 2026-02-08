@@ -34,7 +34,7 @@ const ResumePage = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = `/resume.pdf?v=${Date.now()}`;
-    link.download = 'Kalpesh_Vala_Resume.pdf';
+    link.download = 'Drashti_Pateliya_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
