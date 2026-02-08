@@ -34,7 +34,7 @@ import {
   SiTailwindcss,
   SiExpress,
   SiPostman,
-  SiLinux
+  SiUbuntu
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -44,12 +44,12 @@ const Skills = () => {
     {
       title: 'Programming Languages',
       skills: [
+        { name: 'C', icon: SiCplusplus, color: 'from-blue-600 to-blue-800' },
+        { name: 'C++', icon: SiCplusplus, color: 'from-blue-700 to-purple-700' },
         { name: 'Java', icon: FaJava, color: 'from-red-500 to-orange-500' },
-        { name: 'Go', icon: SiGo, color: 'from-blue-400 to-cyan-400' },
-        { name: 'Python', icon: FaPython, color: 'from-blue-500 to-yellow-500' },
         { name: 'JavaScript', icon: FaJs, color: 'from-yellow-400 to-yellow-600' },
         { name: 'TypeScript', icon: SiTypescript, color: 'from-blue-600 to-blue-800' },
-        { name: 'C++', icon: SiCplusplus, color: 'from-blue-700 to-purple-700' },
+        { name: 'Go', icon: SiGo, color: 'from-blue-400 to-cyan-400' },
       ],
       icon: FaCode,
       color: 'from-blue-500 to-purple-600',
@@ -58,10 +58,8 @@ const Skills = () => {
     {
       title: 'Frameworks & Libraries',
       skills: [
-        { name: 'Spring Boot', icon: SiSpringboot, color: 'from-green-500 to-green-700' },
         { name: 'React.js', icon: FaReact, color: 'from-cyan-400 to-blue-500' },
         { name: 'Next.js', icon: SiNextdotjs, color: 'from-gray-700 to-black' },
-        { name: 'Flask', icon: SiFlask, color: 'from-gray-600 to-gray-800' },
         { name: 'Express.js', icon: SiExpress, color: 'from-gray-700 to-gray-900' },
         { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'from-cyan-400 to-blue-500' },
       ],
@@ -73,10 +71,8 @@ const Skills = () => {
       title: 'DevOps & Tools',
       skills: [
         { name: 'Docker', icon: FaDocker, color: 'from-blue-500 to-blue-700' },
-        { name: 'Kubernetes', icon: SiKubernetes, color: 'from-blue-600 to-purple-600' },
-        { name: 'Jenkins', icon: SiJenkins, color: 'from-blue-700 to-gray-700' },
         { name: 'Git', icon: FaGit, color: 'from-orange-500 to-red-500' },
-        { name: 'Linux', icon: SiLinux, color: 'from-yellow-500 to-black' },
+        { name: 'Ubuntu', icon: SiUbuntu, color: 'from-orange-500 to-red-500' },
         { name: 'Postman', icon: SiPostman, color: 'from-orange-500 to-red-500' },
       ],
       icon: FaServer,
@@ -88,8 +84,6 @@ const Skills = () => {
       skills: [
         { name: 'MySQL', icon: SiMysql, color: 'from-blue-600 to-orange-500' },
         { name: 'MongoDB', icon: SiMongodb, color: 'from-green-500 to-green-700' },
-        { name: 'PostgreSQL', icon: SiPostgresql, color: 'from-blue-700 to-blue-900' },
-        { name: 'Redis', icon: SiRedis, color: 'from-red-500 to-red-700' },
       ],
       icon: FaDatabase,
       color: 'from-orange-500 to-red-600',
@@ -287,8 +281,8 @@ const Skills = () => {
         >
           {[
             { number: "10+", label: "Languages & Frameworks", icon: "🚀" },
-            { number: "5+", label: "DevOps Tools", icon: "⚙️" },
-            { number: "4", label: "Database Systems", icon: "🗄️" },
+            { number: "4+", label: "DevOps Tools", icon: "⚙️" },
+            { number: "2+", label: "Database Systems", icon: "🗄️" },
             { number: "100%", label: "Learning Mindset", icon: "🧠" }
           ].map((stat, index) => (
             <motion.div

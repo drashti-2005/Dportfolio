@@ -35,15 +35,15 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'valakalpesh6175@gmail.com',
-      href: 'mailto:valakalpesh6175@gmail.com',
+      value: 'pateliyadrashti54@gmail.com',
+      href: 'mailto:pateliyadrashti54@gmail.com',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+91 79844 07210',
-      href: 'tel:+917984407210',
+      value: '+91 63547 87729',
+      href: 'tel:+916354787729',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -66,13 +66,13 @@ const Contact = () => {
     {
       icon: FaGithub,
       label: 'GitHub',
-      href: 'https://github.com/Kalpesh-Vala',
+      href: 'https://github.com/drashti-2005',
       color: 'hover:text-gray-800 dark:hover:text-white'
     },
     {
       icon: FaLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249',
+      href: 'https://www.linkedin.com/in/drashti-pateliya-314824324/',
       color: 'hover:text-blue-600'
     },
     {

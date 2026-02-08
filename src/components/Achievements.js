@@ -19,87 +19,77 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
+      title: 'Smart India Hackathon',
+      description:
+        'Participated in the prestigious national-level Smart India Hackathon organized by the Government of India. Competed among thousands of teams across the country and successfully qualified for the Grand Finale in 2025.',
+      date: '2025',
+      icon: '💡',
+      category: 'Competition',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      file:'',
+      gradient: 'from-indigo-600 to-purple-600',
+      badgeColor: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-400'
+    },
+    {
+      id: 2,
+      title: 'Smart India Hackathon 2024 (College Level)',
+      description:
+        'Participated in Smart India Hackathon 2024 at the college level, working on problem analysis, ideation, and solution design as part of a team-based innovation challenge.',
+      date: 'Sep 2024',
+      icon: '💡',
+      category: 'Competition',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      gradient: 'from-blue-600 to-cyan-600',
+      badgeColor: 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-400'
+    },
+
+    {
+      id: 3,
+      title: 'Odoo Hackathon',
+      description:
+        'Participated in the Odoo Hackathon, gaining hands-on experience with the Odoo ERP platform. Worked on real-world problem statements involving business workflows, module customization, and team-based solution development within a competitive environment.',
+      date: '2025',
+      icon: '⚙️',
+      category: 'Competition',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      gradient: 'from-green-600 to-emerald-600',
+      badgeColor: 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-400'
+    },
+    {
+      id: 4,
+      title: 'HACKOUT’25',
+      description:
+        'Participated in HACKOUT’25, a hackathon organized by the Annual Festival Committee of Dhirubhai Ambani Institute of Information & Communication Technology (DA-IICT). Gained hands-on experience in problem-solving, collaborative development, and innovative solution design.',
+      date: 'Aug 2025',
+      icon: '🚀',
+      category: 'Competition',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      gradient: 'from-orange-600 to-red-600',
+      badgeColor: 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-400'
+    },
+    {
+      id: 5,
+      title: 'The Git & Github Bootcamp: Master Git In 2025',
+      description:
+        'Completed comprehensive Git and GitHub bootcamp via Udemy. Mastered version control, branching strategies, collaboration workflows, and GitHub best practices.',
+      date: '2025',
+      icon: '🔧',
+      category: 'Development Tools',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
+      gradient: 'from-gray-700 to-gray-900',
+      badgeColor: 'bg-gray-100 text-gray-800 dark:bg-gray-900/50 dark:text-gray-400'
+    },
+    {
+      id: 6,
       title: 'Aspire Leaders Program (Modules 1 & 2)',
       description:
         'Completed personal & professional development and masterclasses led by world-class educators. Enhanced leadership skills and global perspective.',
       date: '2024',
       icon: '🌍',
       category: 'Leadership',
-      link: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249/details/certifications/',
+      link: 'https://www.linkedin.com/in/drashti-pateliya-314824324/details/certifications/',
       gradient: 'from-blue-600 to-cyan-600',
       badgeColor: 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-400'
-    },
-    {
-      id: 2,
-      title: 'Complete Kubernetes: Easy Practical Guide + Project',
-      description:
-        'Completed comprehensive hands-on Kubernetes training with practical projects via Udemy. Mastered container orchestration and deployment strategies.',
-      date: '2024',
-      icon: '📦',
-      category: 'DevOps',
-      link: 'https://www.udemy.com/certificate/UC-76bde9e9-e159-43c7-a98a-9146f53bf5ba/',
-      gradient: 'from-purple-600 to-pink-600',
-      badgeColor: 'bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-400'
-    },
-    {
-      id: 3,
-      title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
-      description:
-        'Officially certified by Amazon Web Services Training and Certification. Demonstrated proficiency in cloud computing fundamentals and AWS services.',
-      date: '2024',
-      icon: '☁️',
-      category: 'Cloud Computing',
-      link: 'https://www.credly.com/badges/729329cb-52e5-4ba2-bed2-eecbc94e4caa/public_url',
-      gradient: 'from-orange-600 to-red-600',
-      badgeColor: 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-400'
-    },
-    {
-      id: 4,
-      title: 'Certificate of Scholar - Semester II',
-      description:
-        'Awarded Certificate of Scholar by Nirma University for outstanding academic excellence and maintaining high CGPA standards.',
-      date: '2023',
-      icon: '🎓',
-      category: 'Academic',
-      link: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249/details/certifications/',
-      gradient: 'from-green-600 to-emerald-600',
-      badgeColor: 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-400'
-    },
-    {
-      id: 5,
-      title: 'Smart India Hackathon',
-      description:
-        'Participated in prestigious national-level hackathon organized by the Government of India. Competed among thousands of teams nationwide.',
-      date: '2023',
-      icon: '💡',
-      category: 'Competition',
-      link: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249/details/certifications/',
-      gradient: 'from-indigo-600 to-purple-600',
-      badgeColor: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-400'
-    },
-    {
-      id: 6,
-      title: 'HackNuthone 6.0 - Top 10 Team',
-      description:
-        'Selected among the top 10 teams in competitive programming hackathon. Demonstrated exceptional problem-solving and coding skills.',
-      date: '2023',
-      icon: '🏅',
-      category: 'Achievement',
-      link: 'https://certificate.givemycertificate.com/c/d0d58073-966f-46a3-a906-b5016068ecb3',
-      gradient: 'from-yellow-600 to-orange-600',
-      badgeColor: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-400'
-    },
-    {
-      id: 7,
-      title: 'National Research Symposium 2025',
-      description:
-        'Received Certificate of Participation in National Research Symposium for Engineering UG Students at Nirma University. Contributed to research presentations.',
-      date: '2025',
-      icon: '🧪',
-      category: 'Research',
-      link: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249/details/certifications/',
-      gradient: 'from-teal-600 to-blue-600',
-      badgeColor: 'bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-400'
     },
   ];
 
@@ -242,18 +232,19 @@ const Achievements = () => {
                   </p>
 
                   {/* Action */}
-                  <motion.a
-                    href={achievement.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center space-x-2 w-full py-3 px-4 bg-gradient-to-r ${achievement.gradient} text-white font-medium rounded-xl hover:shadow-lg transition-all duration-300 group/btn`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <FaCertificate className="w-4 h-4" />
-                    <span>View Certificate</span>
-                    <FaExternalLinkAlt className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform duration-200" />
-                  </motion.a>
+                  {achievement.link && (
+                    <a
+                      href={achievement.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center justify-center space-x-2 w-full py-3 px-4 bg-gradient-to-r ${achievement.gradient} text-white font-medium rounded-xl rounded-xl`}
+                    >
+                      <FaCertificate className="w-4 h-4" />
+                      <span>View Certificate</span>
+                    </a>
+                  )}
+
+
                 </div>
 
                 {/* Floating Star */}
@@ -281,10 +272,10 @@ const Achievements = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: "7+", label: "Certifications", icon: FaCertificate },
-            { number: "3+", label: "Competitions", icon: FaTrophy },
-            { number: "2+", label: "Academic Awards", icon: FaGraduationCap },
-            { number: "5+", label: "Skills Validated", icon: FaCode }
+            { number: "6+", label: "Achievements", icon: FaTrophy },
+            { number: "4+", label: "Hackathons", icon: FaCode },
+            { number: "2+", label: "Certifications", icon: FaCertificate },
+            { number: "100%", label: "Dedication", icon: FaAward }
           ].map((stat, index) => (
             <motion.div
               key={index}

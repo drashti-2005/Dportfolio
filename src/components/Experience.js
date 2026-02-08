@@ -1,53 +1,40 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaMapMarkerAlt, FaCode, FaUsers, FaGithub, FaDocker, FaAws, FaGitAlt, FaTasks, FaRocket, FaCube, FaDatabase } from 'react-icons/fa';
+import { FaBriefcase, FaRocket, FaCode, FaUsers, FaGithub, FaDocker, FaGitAlt, FaTasks, FaDatabase, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Experience = () => {
-  const experience = {
-    company: "The Special Character PVT. LTD.",
-    industry: "IT / Computers - Software",
-    position: "Full Stack Developer",
-    duration: "08 May, 2025 - 07 Jul, 2025",
-    location: "Remote",
-    skills: [
-      { name: "Github", icon: FaGithub, color: "text-gray-800" },
-      { name: "Docker", icon: FaDocker, color: "text-blue-500" },
-      { name: "Medusa.js", icon: FaCube, color: "text-purple-600" },
-      { name: "AWS", icon: FaAws, color: "text-orange-500" },
-      { name: "Deployment", icon: FaRocket, color: "text-green-500" },
-      { name: "Git", icon: FaGitAlt, color: "text-red-500" },
-      { name: "Payload CMS", icon: FaDatabase, color: "text-indigo-600" },
-      { name: "Task Management", icon: FaTasks, color: "text-blue-600" }
-    ],
-    responsibilities: [
-      {
-        icon: FaCode,
-        title: "E-commerce Platform Development",
-        description: "Spearheaded the end-to-end development of a full-fledged e-commerce platform, leveraging Medusa.js for core commerce logic and Payload CMS for dynamic content management."
-      },
-      {
-        icon: FaUsers,
-        title: "Backend Engineering",
-        description: "Engineered key backend modules, including secure user authentication, comprehensive product lifecycle management, and custom CMS workflows to streamline administrative operations."
-      },
-      {
-        icon: FaGitAlt,
-        title: "Git Workflow Implementation",
-        description: "Established and enforced a Git-based workflow, mandating pull request (PR) reviews to maintain high code quality, ensure branch integrity, and resolve merge conflicts effectively."
-      },
-      {
-        icon: FaUsers,
-        title: "Team Mentorship",
-        description: "Mentored team members on version control best practices and collaborative coding standards, significantly improving team efficiency and reducing code integration issues."
-      },
-      {
-        icon: FaRocket,
-        title: "Agile Leadership",
-        description: "Led the agile development cycle, ensuring timely delivery of features and maintaining high development standards throughout the project lifecycle."
-      }
-    ]
-  };
+  const skills = [
+    { name: "Full Stack Development", icon: FaCode, color: "text-blue-600" },
+    { name: "Git & GitHub", icon: FaGithub, color: "text-gray-800" },
+    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "Database Design", icon: FaDatabase, color: "text-green-600" },
+    { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" },
+    { name: "Agile Development", icon: FaTasks, color: "text-orange-500" }
+  ];
+
+  const readyToContribute = [
+    {
+      icon: FaCode,
+      title: "Full Stack Development",
+      description: "Proficient in building end-to-end applications using modern frameworks like React, Next.js, Express.js, and Spring Boot with strong database management skills."
+    },
+    {
+      icon: FaGitAlt,
+      title: "Version Control & Collaboration",
+      description: "Experienced with Git workflows, pull requests, code reviews, and collaborative development practices through hackathons and academic projects."
+    },
+    {
+      icon: FaRocket,
+      title: "Fast Learner & Problem Solver",
+      description: "Demonstrated ability to quickly learn new technologies and frameworks. Participated in multiple hackathons including Smart India Hackathon 2025 Grand Finale."
+    },
+    {
+      icon: FaDatabase,
+      title: "Backend & API Development",
+      description: "Strong foundation in RESTful API design, JWT authentication, real-time features with WebSockets, and scalable system architecture."
+    }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -95,15 +82,15 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Experience
+            Ready for New Opportunities
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            My professional journey and hands-on experience in software development
+            Actively seeking full-time opportunities to contribute and grow as a Full Stack Developer
           </p>
         </motion.div>
 
-        {/* Experience Card */}
+        {/* Main Card */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -111,37 +98,32 @@ const Experience = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-3xl transition-all duration-500">
-            {/* Header Section */}
-            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 p-8 md:p-12">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                <div className="text-white">
-                  <motion.h3 
-                    variants={itemVariants}
-                    className="text-2xl md:text-3xl font-bold mb-2"
-                  >
-                    {experience.position}
-                  </motion.h3>
-                  <motion.div 
-                    variants={itemVariants}
-                    className="flex flex-col sm:flex-row sm:items-center gap-4 text-blue-100"
-                  >
-                    <div className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-blue-200" />
-                      <span className="font-medium">{experience.company}</span>
-                    </div>
-                    <div className="hidden sm:block w-1 h-1 bg-blue-200 rounded-full"></div>
-                    <span className="text-sm">{experience.industry}</span>
-                  </motion.div>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
+            
+            {/* Header Banner */}
+            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 p-8 md:p-12 text-center">
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-4">
+                  <FaBriefcase className="text-4xl text-white" />
                 </div>
-                
-                <motion.div 
-                  variants={itemVariants}
-                  className="flex items-center gap-2 text-blue-100 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3"
-                >
-                  <FaCalendarAlt className="text-blue-200" />
-                  <span className="font-medium text-sm md:text-base">{experience.duration}</span>
-                </motion.div>
+              </motion.div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                Open to Full-Time Opportunities
+              </h3>
+              <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+                Information Technology Engineering student with strong full-stack development skills, 
+                seeking opportunities to make an impact
+              </p>
+              <div className="flex items-center justify-center gap-3 mt-6">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-white text-sm font-medium">Available Immediately</span>
+                </div>
               </div>
             </div>
 
@@ -151,19 +133,19 @@ const Experience = () => {
               className="p-8 md:p-12 border-b border-gray-200 dark:border-gray-700"
             >
               <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                <span className="text-2xl">🛠️</span>
-                Key Technologies & Skills
+                <span className="text-2xl">💼</span>
+                What I Bring to the Table
               </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {experience.skills.map((skill, index) => (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     variants={skillVariants}
                     whileHover="hover"
-                    className="group flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-600 dark:hover:to-gray-600 transition-all duration-300 cursor-pointer"
+                    className="group flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-gray-600 dark:hover:to-gray-600 transition-all duration-300"
                   >
                     <skill.icon className={`text-2xl md:text-3xl ${skill.color} dark:text-white group-hover:scale-110 transition-transform duration-300`} />
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-2 text-center group-hover:text-gray-900 dark:group-hover:text-white">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-2 text-center">
                       {skill.name}
                     </span>
                   </motion.div>
@@ -171,17 +153,17 @@ const Experience = () => {
               </div>
             </motion.div>
 
-            {/* Responsibilities Section */}
+            {/* Ready to Contribute Section */}
             <motion.div 
               variants={itemVariants}
               className="p-8 md:p-12"
             >
               <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-2">
                 <span className="text-2xl">🚀</span>
-                Key Responsibilities & Achievements
+                Ready to Contribute
               </h4>
               <div className="space-y-6">
-                {experience.responsibilities.map((responsibility, index) => (
+                {readyToContribute.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
@@ -189,15 +171,15 @@ const Experience = () => {
                   >
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <responsibility.icon className="text-white text-xl" />
+                        <item.icon className="text-white text-xl" />
                       </div>
                     </div>
                     <div className="flex-1">
                       <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                        {responsibility.title}
+                        {item.title}
                       </h5>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {responsibility.description}
+                        {item.description}
                       </p>
                     </div>
                   </motion.div>
@@ -205,26 +187,33 @@ const Experience = () => {
               </div>
             </motion.div>
 
-            {/* Footer Section */}
+            {/* Call to Action Footer */}
             <motion.div 
               variants={itemVariants}
-              className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 p-6 md:p-8"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center"
             >
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                  <span className="text-2xl">💼</span>
-                  <span className="font-medium">Internship Experience</span>
-                </div>
-                <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span>2 Months Duration</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Full Stack Development</span>
-                  </div>
-                </div>
+              <h4 className="text-2xl font-bold text-white mb-3">Let's Build Something Great Together!</h4>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                I'm eager to join a team where I can contribute my skills, learn from experienced professionals, 
+                and grow as a developer.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="https://www.linkedin.com/in/drashti-pateliya-314824324/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105"
+                >
+                  <FaLinkedin className="text-xl" />
+                  Connect on LinkedIn
+                </a>
+                <a
+                  href="mailto:your.email@example.com"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/30"
+                >
+                  <FaEnvelope className="text-xl" />
+                  Send Email
+                </a>
               </div>
             </motion.div>
           </div>

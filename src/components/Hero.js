@@ -9,7 +9,7 @@ import {
   FaCode, 
   FaRocket, 
   FaLaptopCode,
-  FaBrain,
+  FaDatabase,
   FaServer,
   FaCloud
 } from 'react-icons/fa';
@@ -29,8 +29,8 @@ const Hero = () => {
   const skills = [
     { icon: FaCode, label: 'Full Stack', color: 'text-blue-500' },
     { icon: FaServer, label: 'Backend', color: 'text-green-500' },
-    { icon: FaBrain, label: 'ML/AI', color: 'text-purple-500' },
-    { icon: FaCloud, label: 'DevOps', color: 'text-orange-500' }
+    { icon: FaDatabase, label: 'Databases', color: 'text-purple-500' },
+    { icon: FaCloud, label: 'Cloud & DevOps', color: 'text-orange-500' }
   ];
 
   const containerVariants = {
@@ -69,27 +69,37 @@ const Hero = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-30"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              x: [0, Math.random() * 20 - 10, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          // Use index-based seeded values for consistent SSR/client rendering
+          const seed = i * 7.919; // Prime number for better distribution
+          const left = ((seed * 13.37) % 100);
+          const top = ((seed * 17.89) % 100);
+          const xOffset = ((seed * 5.43) % 20) - 10;
+          const duration = 3 + ((seed * 3.21) % 2);
+          const delay = (seed * 1.67) % 2;
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-30"
+              style={{
+                left: `${left}%`,
+                top: `${top}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                x: [0, xOffset, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration,
+                repeat: Infinity,
+                delay,
+                ease: "easeInOut"
+              }}
+            />
+          );
+        })}
 
         {/* Gradient Orbs */}
         <motion.div
@@ -185,7 +195,7 @@ const Hero = () => {
                     backgroundSize: "200% 200%"
                   }}
                 >
-                  Kalpesh
+                  Drashti
                 </motion.span>
               </h1>
               
@@ -197,7 +207,7 @@ const Hero = () => {
                   animate={{ opacity: [1, 0.7, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  Software Engineer
+                  Full Stack Developer
                 </motion.span>
               </motion.div>
             </motion.div>
@@ -207,13 +217,12 @@ const Hero = () => {
               className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl"
               variants={itemVariants}
             >
-              Passionate developer specializing in{' '}
-              <span className="font-semibold text-blue-600 dark:text-blue-400">Backend Development</span>,{' '}
-              <span className="font-semibold text-green-600 dark:text-green-400">Cloud Native Applications</span>,{' '}
-              <span className="font-semibold text-purple-600 dark:text-purple-400">DevSecOps</span>,{' '}
-              <span className="font-semibold text-blue-600 dark:text-blue-400">Scalable Applications</span>, and{' '}
-              <span className="font-semibold text-green-600 dark:text-green-400">Microservices</span>.
-              Currently studying at Institute of Technology, Nirma University.
+              Passionate Information Technology Engineering student specializing in{' '}
+              <span className="font-semibold text-blue-600 dark:text-blue-400">Full Stack Development</span>,{' '}
+              <span className="font-semibold text-green-600 dark:text-green-400">Backend Engineering</span>,{' '}
+              <span className="font-semibold text-purple-600 dark:text-purple-400">Database Design</span>, and{' '}
+              <span className="font-semibold text-orange-600 dark:text-orange-400">RESTful APIs</span>.
+              Currently studying at Vishwakarma Government Engineering College.
             </motion.p>
 
             {/* Skills Icons */}
@@ -283,9 +292,9 @@ const Hero = () => {
               variants={itemVariants}
             >
               {[
-                { number: "15+", label: "Projects" },
+                { number: "10+", label: "Projects" },
                 { number: "3+", label: "Years Coding" },
-                { number: "8.20", label: "CGPA" }
+                { number: "8.09", label: "CGPA" }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -369,7 +378,7 @@ const Hero = () => {
                 {/* Image */}
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/50 dark:border-gray-700/50 shadow-2xl backdrop-blur-sm">
                   <Image
-                    src="/images/profile.jpg"
+                    src="/images/profile.jpeg"
                     alt="Kalpesh Vala"
                     fill
                     className="object-cover object-top transform scale-y-[-1] rotate-180"

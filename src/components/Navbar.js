@@ -171,7 +171,7 @@ const Navbar = () => {
               {/* Social Links - Desktop */}
               <div className="hidden md:flex items-center space-x-2">
                 <motion.a
-                  href="https://github.com/Kalpesh-Vala"
+                  href="https://github.com/drashti-2005"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
@@ -181,7 +181,7 @@ const Navbar = () => {
                   <FaGithub className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="https://www.linkedin.com/in/kalpesh-vala-1b2458249"
+                  href="https://www.linkedin.com/in/drashti-pateliya-314824324/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
@@ -256,7 +256,7 @@ const Navbar = () => {
                   {/* Mobile Social Links */}
                   <div className="flex items-center justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                     <motion.a
-                      href="https://github.com/Kalpesh-Vala"
+                      href="https://github.com/drashti-2005"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300"
@@ -266,7 +266,7 @@ const Navbar = () => {
                       <FaGithub className="w-6 h-6" />
                     </motion.a>
                     <motion.a
-                      href="https://www.linkedin.com/in/kalpesh-vala-1b2458249"
+                      href="https://www.linkedin.com/in/drashti-pateliya-314824324/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300"

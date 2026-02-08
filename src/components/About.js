@@ -12,20 +12,22 @@ import {
   FaCloud, 
   FaCogs,
   FaQuoteLeft,
-  FaQuoteRight
+  FaQuoteRight,
+  FaDatabase,
+  FaMobile
 } from 'react-icons/fa';
 
 const About = () => {
   const details = [
     { 
       label: 'College', 
-      value: 'Institute of Technology, Nirma University',
+      value: 'vishwakarma government engineering college',
       icon: FaUniversity,
       color: 'text-blue-600 dark:text-blue-400'
     },
     { 
       label: 'CGPA', 
-      value: '8.20 / 10',
+      value: '8.09 / 10',
       icon: FaGraduationCap,
       color: 'text-green-600 dark:text-green-400'
     },
@@ -38,12 +40,11 @@ const About = () => {
   ];
 
   const interests = [
-    { name: 'Java Development', icon: FaCode, color: 'from-red-500 to-orange-500' },
-    { name: 'Web Development', icon: FaGlobe, color: 'from-blue-500 to-cyan-500' },
-    { name: 'DevOps', icon: FaServer, color: 'from-gray-600 to-gray-800' },
-    { name: 'Python Programming', icon: FaPython, color: 'from-green-500 to-blue-500' },
+    { name: 'Full Stack Development', icon: FaCode, color: 'from-purple-600 to-pink-600' },
+    { name: 'Application Development', icon: FaMobile, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Database Management', icon: FaDatabase, color: 'from-green-500 to-emerald-500' },
     { name: 'Cloud Computing', icon: FaCloud, color: 'from-sky-400 to-blue-600' },
-    { name: 'System Administration', icon: FaCogs, color: 'from-purple-500 to-pink-500' },
+    { name: 'DevOps & CI/CD', icon: FaCogs, color: 'from-purple-500 to-pink-500' },
   ];
 
   const containerVariants = {
@@ -130,10 +131,10 @@ const About = () => {
                 
                 <div className="space-y-6">
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                    Passionate and self-driven Computer Science Engineering student with a strong foundation in{' '}
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">Java</span>,{' '}
-                    <span className="font-semibold text-green-600 dark:text-green-400">Python</span>,{' '}
-                    <span className="font-semibold text-red-600 dark:text-red-400">C++</span>,{' '}
+                    Passionate and self-driven Information Technology Engineering student with a strong foundation in{' '}
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">C</span>,{' '}
+                    <span className="font-semibold text-green-600 dark:text-green-400">C++</span>,{' '}
+                    <span className="font-semibold text-red-600 dark:text-red-400">Java</span>,{' '}
                     <span className="font-semibold text-yellow-600 dark:text-yellow-400">JavaScript</span>, and{' '}
                     <span className="font-semibold text-cyan-600 dark:text-cyan-400">Go</span>.
                   </p>
@@ -145,8 +146,9 @@ const About = () => {
                   </p>
                   
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                    Skilled in Spring Boot, Flask, Express.js, Next.js, Node.js, and web technologies like ReactJS and Tailwind CSS.
-                    Currently exploring Kubernetes and the Spring framework.
+                    Skilled in backend frameworks (Express.js) and modern frontend 
+                    technologies (React, Next.js, Tailwind CSS). Experienced with database design, 
+                    RESTful API development, JWT authentication, and Docker containerization.
                   </p>
                   
                   <motion.div 
@@ -156,8 +158,8 @@ const About = () => {
                   >
                     <FaQuoteRight className="text-blue-600 dark:text-blue-400 text-2xl mb-4" />
                     <p className="text-gray-700 dark:text-gray-300 font-medium italic">
-                      &ldquo;Demonstrates a hands-on approach to building efficient, real-world solutions, 
-                      including a real-time chat application and an e-commerce backend system.&rdquo;
+                      &ldquo;Proven ability to design and deploy full-stack applications with modern tech stacks, 
+                      implementing secure authentication, real-time features, and scalable architectures.&rdquo;
                     </p>
                   </motion.div>
                 </div>
@@ -289,9 +291,9 @@ const About = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: "15+", label: "Projects Completed", icon: "🚀" },
+            { number: "10+", label: "Projects Completed", icon: "🚀" },
             { number: "3+", label: "Years of Coding", icon: "⌨️" },
-            { number: "8.20", label: "CGPA", icon: "🎓" },
+            { number: "8.09", label: "CGPA", icon: "🎓" },
             { number: "100%", label: "Dedication", icon: "💯" }
           ].map((stat, index) => (
             <motion.div

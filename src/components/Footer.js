@@ -18,25 +18,19 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaGithub,
-      href: 'https://github.com/Kalpesh-Vala',
+      href: 'https://github.com/drashti-2005',
       label: 'GitHub',
       color: 'hover:text-gray-300'
     },
     {
       icon: FaLinkedin,
-      href: 'https://www.linkedin.com/in/kalpesh-vala-1b2458249',
+      href: 'https://www.linkedin.com/in/drashti-pateliya-314824324/',
       label: 'LinkedIn',
       color: 'hover:text-blue-400'
     },
     {
-      icon: FaTwitter,
-      href: '#',
-      label: 'Twitter',
-      color: 'hover:text-blue-300'
-    },
-    {
       icon: FaEnvelope,
-      href: 'mailto:valakalpesh6175@gmail.com',
+      href: 'mailto:pateliyadrashti54@gmail.com',
       label: 'Email',
       color: 'hover:text-red-400'
     }
@@ -53,17 +47,17 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FaEnvelope,
-      text: 'valakalpesh6175@@gmail.com',
-      href: 'mailto:valakalpesh6175@gmail.com'
-    },
-    {
-      icon: FaPhone,
-      text: '+91 79844 07210',
-      href: 'tel:+917984407210'
+      text: 'pateliyadrashti54@gmail.com',
+      href: 'mailto:pateliyadrashti54@gmail.com'
     },
     {
       icon: FaMapMarkerAlt,
       text: 'Gujarat, India',
+      href: '#'
+    },
+    {
+      icon: FaCode,
+      text: 'IT Engineering Student',
       href: '#'
     }
   ];
@@ -122,15 +116,15 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Kalpesh Vala
+                    Drashti Pateliya
                   </h3>
                   <p className="text-gray-400 text-sm">Full Stack Developer</p>
                 </div>
               </motion.div>
               
               <p className="text-gray-300 leading-relaxed mb-6">
-                Passionate software engineer specializing in building exceptional digital experiences. 
-                From concept to deployment, I create scalable solutions that make a difference.
+                Passionate Information Technology Engineering student specializing in full-stack development. 
+                Building innovative solutions with modern technologies and eager to contribute to impactful projects.
               </p>
               
               <div className="space-y-3">
@@ -220,7 +214,7 @@ const Footer = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <span>&copy; {new Date().getFullYear()} Kalpesh Vala. All rights reserved.</span>
+                <span>&copy; {new Date().getFullYear()} Drashti Pateliya. All rights reserved.</span>
                 <span className="hidden sm:inline">•</span>
                 <span className="flex items-center space-x-1">
                   <span>Built with</span>

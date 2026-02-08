@@ -9,31 +9,20 @@ import { FaGithub, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
 const ProjectsPage = () => {
   const allProjects = [
     {
-      title: 'Employee Management System',
-      description: 'A simple Spring Boot application that performs CRUD operations for managing employees...',
-      image: '/user-crud.jpeg',
-      github: 'https://github.com/Kalpesh-Vala/user-crud',
+      title: 'OneFlow ERP - Plan to Bill in One Place',
+      description: 'A comprehensive, modular Project Management and ERP system that takes projects from planning to execution to billing—all in one unified platform. Built for teams that need to manage projects, track finances, and collaborate effectively.',
+      image: '/',
+      github: 'https://github.com/drashti-2005/amalthea_odoo_team_75',
       demo: '',
-      video: '',
-      tags: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
+      video: 'https://drive.google.com/file/d/1A25mp8AIBubDR-kPbdf71Y-vr5A-Myof/view?usp=sharing',
+      tags: ['Python', 'React', 'FastAPI', 'PostgreSQL', 'ERP'],
       highlights: [
-        'Built CRUD endpoints using Spring Data JPA',
-        'Implemented service-repository-controller architecture',
-        'Used MySQL as backend database',
-      ],
-    },
-    {
-      title: 'E-commerce Backend System - MyShops',
-      description: 'Developed a fully-functional e-commerce backend using Spring Boot following clean architecture...',
-      image: '/springboot-ecommerce.jpeg',
-      github: 'https://github.com/Kalpesh-Vala/my-shops',
-      demo: '',
-      video: '',
-      tags: ['Java', 'Spring Boot', 'MySQL', 'Docker', 'REST API'],
-      highlights: [
-        'Modular folder structure with services, DTOs, requests/responses, and exceptions',
-        'Implemented user authentication, product, cart, and order APIs',
-        'Containerized the application using Docker for easy deployment',
+        'End-to-end workflow from project planning to billing',
+        'Financial integration with Sales Orders, Purchase Orders, Invoices, and Bills',
+        'Built-in timesheet management with billable/non-billable hour tracking',
+        'Real-time analytics for project profitability and resource utilization',
+        'Role-based access control for different team members',
+        'Modern UI/UX built with React and responsive design',
       ],
     },
   ];
