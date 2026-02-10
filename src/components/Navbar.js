@@ -131,8 +131,8 @@ const Navbar = () => {
                 className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent hover:from-primary-500 hover:to-accent-500 transition-all duration-300"
               >
                 <FaCode className="text-primary-600 dark:text-primary-400" />
-                <span className="hidden sm:block">Kalpesh Vala</span>
-                <span className="block sm:hidden">KV</span>
+                <span className="hidden sm:block">Drashti Pateliya</span>
+                <span className="block sm:hidden">DP</span>
               </Link>
             </motion.div>
 

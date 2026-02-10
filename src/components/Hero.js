@@ -379,7 +379,7 @@ const Hero = () => {
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/50 dark:border-gray-700/50 shadow-2xl backdrop-blur-sm">
                   <Image
                     src="/images/profile.jpeg"
-                    alt="Kalpesh Vala"
+                    alt="Drashti Pateliya"
                     fill
                     className="object-cover object-top transform scale-y-[-1] rotate-180"
                     priority

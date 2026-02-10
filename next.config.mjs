@@ -11,7 +11,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Disposition',
-            value: 'inline; filename="Kalpesh_Vala_Resume.pdf"',
+            value: 'inline; filename="Drashti_Pateliya_Resume.pdf"',
           },
           {
             key: 'Cache-Control',

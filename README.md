@@ -31,7 +31,7 @@ A modern, responsive portfolio website built with Next.js and Tailwind CSS. This
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Kalpesh-Vala/portfolio.git
+   git clone https://github.com/drashti-2005/Dportfolio
    cd portfolio
    ```
 
@@ -72,10 +72,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Kalpesh-Vala/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/drashti-2005/Dportfolio/issues).
 
 ## 📧 Contact
+Drashti Pateliya - [LinkedIn](https://www.linkedin.com/in/drashti-pateliya-314824324/)
 
-Kalpesh Vala - [LinkedIn](https://www.linkedin.com/in/kalpesh-vala-1b2458249)
-
-Project Link: [https://github.com/Kalpesh-Vala/portfolio](https://github.com/Kalpesh-Vala/portfolio)
+Project Link: [https://github.com/drashti-2005/Dportfolio](https://github.com/drashti-2005/Dportfolio)
