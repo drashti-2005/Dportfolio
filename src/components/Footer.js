@@ -123,7 +123,7 @@ const Footer = () => {
               </motion.div>
               
               <p className="text-gray-300 leading-relaxed mb-6">
-                Passionate Information Technology Engineering student specializing in full-stack development. 
+                Passionate Information Technology Engineering student specializing in full-stack development and data engineering. 
                 Building innovative solutions with modern technologies and eager to contribute to impactful projects.
               </p>
               

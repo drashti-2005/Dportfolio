@@ -1,23 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaRocket, FaCode, FaUsers, FaGithub, FaDocker, FaGitAlt, FaTasks, FaDatabase, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaBriefcase, FaRocket, FaCode, FaUsers, FaGithub, FaDocker, FaGitAlt, FaDatabase, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Experience = () => {
   const skills = [
     { name: "Full Stack Development", icon: FaCode, color: "text-blue-600" },
     { name: "Git & GitHub", icon: FaGithub, color: "text-gray-800" },
     { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "Data Engineering", icon: FaDatabase, color: "text-orange-500" },
     { name: "Database Design", icon: FaDatabase, color: "text-green-600" },
-    { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" },
-    { name: "Agile Development", icon: FaTasks, color: "text-orange-500" }
+    { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" }
   ];
 
   const readyToContribute = [
     {
       icon: FaCode,
       title: "Full Stack Development",
-      description: "Proficient in building end-to-end applications using modern frameworks like React, Next.js, Express.js, and Spring Boot with strong database management skills."
+      description: "Proficient in building end-to-end applications using modern frameworks like React, Next.js, and Express.js with strong database management skills."
     },
     {
       icon: FaGitAlt,
@@ -31,8 +31,8 @@ const Experience = () => {
     },
     {
       icon: FaDatabase,
-      title: "Backend & API Development",
-      description: "Strong foundation in RESTful API design, JWT authentication, real-time features with WebSockets, and scalable system architecture."
+      title: "Data Engineering & Backend Development",
+      description: "Strong foundation in building ETL pipelines and star-schema data warehouses with PySpark, pandas, and PostgreSQL, along with RESTful API design, JWT authentication, and real-time features using WebSockets."
     }
   ];
 
@@ -208,7 +208,7 @@ const Experience = () => {
                   Connect on LinkedIn
                 </a>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:pateliyadrashti54@gmail.com"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/30"
                 >
                   <FaEnvelope className="text-xl" />

@@ -13,8 +13,7 @@ import {
   FaCogs,
   FaQuoteLeft,
   FaQuoteRight,
-  FaDatabase,
-  FaMobile
+  FaDatabase
 } from 'react-icons/fa';
 
 const About = () => {
@@ -41,7 +40,8 @@ const About = () => {
 
   const interests = [
     { name: 'Full Stack Development', icon: FaCode, color: 'from-purple-600 to-pink-600' },
-    { name: 'Application Development', icon: FaMobile, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Data Engineering', icon: FaDatabase, color: 'from-orange-500 to-amber-500' },
+    { name: 'Backend Development', icon: FaServer, color: 'from-indigo-500 to-purple-500' },
     { name: 'Database Management', icon: FaDatabase, color: 'from-green-500 to-emerald-500' },
     { name: 'Cloud Computing', icon: FaCloud, color: 'from-sky-400 to-blue-600' },
     { name: 'DevOps & CI/CD', icon: FaCogs, color: 'from-purple-500 to-pink-500' },
@@ -134,20 +134,21 @@ const About = () => {
                     Passionate and self-driven Information Technology Engineering student with a strong foundation in{' '}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">C</span>,{' '}
                     <span className="font-semibold text-green-600 dark:text-green-400">C++</span>,{' '}
-                    <span className="font-semibold text-red-600 dark:text-red-400">Java</span>,{' '}
-                    <span className="font-semibold text-yellow-600 dark:text-yellow-400">JavaScript</span>, and{' '}
-                    <span className="font-semibold text-cyan-600 dark:text-cyan-400">Go</span>.
+                    <span className="font-semibold text-yellow-600 dark:text-yellow-400">Python</span>,{' '} and{' '}
+                    <span className="font-semibold text-amber-600 dark:text-amber-400">JavaScript</span>. 
                   </p>
                   
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                     Experienced in developing full-stack software and web applications with a focus on{' '}
-                    <span className="font-semibold text-purple-600 dark:text-purple-400">backend development</span> and{' '}
+                    <span className="font-semibold text-purple-600 dark:text-purple-400">backend development</span>,{' '}
+                    <span className="font-semibold text-orange-600 dark:text-orange-400">data engineering</span>, and{' '}
                     <span className="font-semibold text-indigo-600 dark:text-indigo-400">scalable system design</span>.
                   </p>
                   
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                     Skilled in backend frameworks (Express.js) and modern frontend 
-                    technologies (React, Next.js, Tailwind CSS). Experienced with database design, 
+                    technologies (React, Next.js, Tailwind CSS), along with data tools like 
+                    PySpark, pandas, and PostgreSQL. Experienced with ETL pipelines, database design, 
                     RESTful API development, JWT authentication, and Docker containerization.
                   </p>
                   

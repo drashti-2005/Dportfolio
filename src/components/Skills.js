@@ -299,10 +299,10 @@ const Skills = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: "10+", label: "Languages & Frameworks", icon: "🚀" },
+            { number: "11+", label: "Languages & Frameworks", icon: "🚀" },
             { number: "4+", label: "DevOps Tools", icon: "⚙️" },
-            { number: "2+", label: "Database Systems", icon: "🗄️" },
-            { number: "100%", label: "Learning Mindset", icon: "🧠" }
+            { number: "3+", label: "Database Systems", icon: "🗄️" },
+            { number: "5+", label: "Data & Analytics Tools", icon: "📊" }
           ].map((stat, index) => (
             <motion.div
               key={index}

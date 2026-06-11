@@ -29,7 +29,7 @@ const Hero = () => {
   const skills = [
     { icon: FaCode, label: 'Full Stack', color: 'text-blue-500' },
     { icon: FaServer, label: 'Backend', color: 'text-green-500' },
-    { icon: FaDatabase, label: 'Databases', color: 'text-purple-500' },
+    { icon: FaDatabase, label: 'Data Engineering', color: 'text-purple-500' },
     { icon: FaCloud, label: 'Cloud & DevOps', color: 'text-orange-500' }
   ];
 
@@ -220,7 +220,7 @@ const Hero = () => {
               Passionate Information Technology Engineering student specializing in{' '}
               <span className="font-semibold text-blue-600 dark:text-blue-400">Full Stack Development</span>,{' '}
               <span className="font-semibold text-green-600 dark:text-green-400">Backend Engineering</span>,{' '}
-              <span className="font-semibold text-purple-600 dark:text-purple-400">Database Design</span>, and{' '}
+              <span className="font-semibold text-purple-600 dark:text-purple-400">Data Engineering</span>, and{' '}
               <span className="font-semibold text-orange-600 dark:text-orange-400">RESTful APIs</span>.
               Currently studying at Vishwakarma Government Engineering College.
             </motion.p>
@@ -275,7 +275,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="/resume.pdf"
+                href="/Drashti's-Resume.pdf"
                 download
                 className="group inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300"
                 whileHover={{ scale: 1.02, y: -2 }}

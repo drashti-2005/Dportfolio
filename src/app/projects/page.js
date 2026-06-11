@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { FaGithub, FaExternalLinkAlt, FaPlay } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaPlay, FaArrowLeft } from 'react-icons/fa';
 
 const ProjectsPage = () => {
   const allProjects = [
@@ -67,6 +68,21 @@ const ProjectsPage = () => {
 
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <Link
+              href="/#projects"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
+            >
+              <FaArrowLeft className="w-4 h-4" />
+              <span className="font-medium">Back to Projects</span>
+            </Link>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

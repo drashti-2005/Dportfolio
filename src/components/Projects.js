@@ -335,14 +335,6 @@ const Projects = () => {
                         </motion.a>
                       )}
                     </div>
-
-                    <motion.button
-                      className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm flex items-center space-x-1 group"
-                      whileHover={{ x: 5 }}
-                    >
-                      <span>Learn More</span>
-                      <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
-                    </motion.button>
                   </div>
                 </div>
               </motion.div>
