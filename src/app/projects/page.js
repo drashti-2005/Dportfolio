@@ -11,7 +11,7 @@ const ProjectsPage = () => {
     {
       title: 'OneFlow ERP - Plan to Bill in One Place',
       description: 'A comprehensive, modular Project Management and ERP system that takes projects from planning to execution to billing—all in one unified platform. Built for teams that need to manage projects, track finances, and collaborate effectively.',
-      image: '/',
+      image: '/OneFlow-ERP.png',
       github: 'https://github.com/drashti-2005/amalthea_odoo_team_75',
       demo: '',
       video: 'https://drive.google.com/file/d/1A25mp8AIBubDR-kPbdf71Y-vr5A-Myof/view?usp=sharing',
@@ -23,6 +23,23 @@ const ProjectsPage = () => {
         'Real-time analytics for project profitability and resource utilization',
         'Role-based access control for different team members',
         'Modern UI/UX built with React and responsive design',
+      ],
+    },
+    {
+      title: 'Task Manager – Full Stack Web Application',
+      description: 'Built a secure full-stack task management platform with role-based access control, team collaboration, and multi-workspace support. Implemented JWT-based authentication, task CRUD operations, analytics dashboard, and activity logging using MongoDB Atlas. Designed RESTful APIs using Express.js and developed a responsive user interface with React and Tailwind CSS.',
+      image: '/task_manager.jpg',
+      github: 'https://github.com/drashti-2005/task-manager',
+      demo: '',
+      video: '',
+      tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
+      highlights: [
+        'Role-based access control with multi-workspace support',
+        'JWT-based authentication and secure session handling',
+        'Task CRUD operations with team collaboration',
+        'Analytics dashboard and activity logging using MongoDB Atlas',
+        'RESTful APIs built with Express.js',
+        'Responsive UI built with React and Tailwind CSS',
       ],
     },
   ];

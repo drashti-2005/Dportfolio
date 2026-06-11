@@ -33,7 +33,7 @@ const ResumePage = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `/resume.pdf?v=${Date.now()}`;
+    link.href = `/Drashti's-Resume.pdf?v=${Date.now()}`;
     link.download = 'Drashti_Pateliya_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -41,7 +41,7 @@ const ResumePage = () => {
   };
 
   const handleViewInNewTab = () => {
-    window.open(`/resume.pdf?v=${Date.now()}`, '_blank');
+    window.open(`/Drashti's-Resume.pdf?v=${Date.now()}`, '_blank');
   };
 
   const handleIframeError = () => {
@@ -138,7 +138,7 @@ const ResumePage = () => {
             ) : (
               /* Show iframe only for supported browsers */
               <iframe
-                src={`/resume.pdf?v=${Date.now()}#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&print-dialog=0`}
+                src={`/Drashti's-Resume.pdf?v=${Date.now()}#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&print-dialog=0`}
                 className={`w-full h-[800px] ${isLoading ? 'hidden' : 'block'}`}
                 onLoad={() => setIsLoading(false)}
                 onError={handleIframeError}

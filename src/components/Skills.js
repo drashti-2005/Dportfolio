@@ -34,7 +34,11 @@ import {
   SiTailwindcss,
   SiExpress,
   SiPostman,
-  SiUbuntu
+  SiUbuntu,
+  SiApachespark,
+  SiPandas,
+  SiStreamlit,
+  SiPlotly
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -47,6 +51,7 @@ const Skills = () => {
         { name: 'C', icon: SiCplusplus, color: 'from-blue-600 to-blue-800' },
         { name: 'C++', icon: SiCplusplus, color: 'from-blue-700 to-purple-700' },
         { name: 'Java', icon: FaJava, color: 'from-red-500 to-orange-500' },
+        { name: 'Python', icon: FaPython, color: 'from-blue-500 to-yellow-500' },
         { name: 'JavaScript', icon: FaJs, color: 'from-yellow-400 to-yellow-600' },
         { name: 'TypeScript', icon: SiTypescript, color: 'from-blue-600 to-blue-800' },
         { name: 'Go', icon: SiGo, color: 'from-blue-400 to-cyan-400' },
@@ -84,10 +89,24 @@ const Skills = () => {
       skills: [
         { name: 'MySQL', icon: SiMysql, color: 'from-blue-600 to-orange-500' },
         { name: 'MongoDB', icon: SiMongodb, color: 'from-green-500 to-green-700' },
+        { name: 'PostgreSQL', icon: SiPostgresql, color: 'from-blue-600 to-blue-800' },
       ],
       icon: FaDatabase,
       color: 'from-orange-500 to-red-600',
       description: 'Database systems for data storage and management'
+    },
+    {
+      title: 'Data Engineering & Analytics',
+      skills: [
+        { name: 'Apache Spark', icon: SiApachespark, color: 'from-orange-500 to-red-500' },
+        { name: 'PySpark', icon: SiApachespark, color: 'from-orange-400 to-amber-500' },
+        { name: 'pandas', icon: SiPandas, color: 'from-purple-600 to-indigo-700' },
+        { name: 'Streamlit', icon: SiStreamlit, color: 'from-red-500 to-pink-500' },
+        { name: 'Plotly', icon: SiPlotly, color: 'from-indigo-500 to-purple-600' },
+      ],
+      icon: FaDatabase,
+      color: 'from-amber-500 to-orange-600',
+      description: 'Building ETL pipelines, data warehouses, and large-scale analytics'
     },
   ];
 

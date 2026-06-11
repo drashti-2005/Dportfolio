@@ -3,15 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaGithub, 
   FaLinkedin, 
   FaBars, 
   FaTimes, 
-  FaSun, 
-  FaMoon,
   FaCode,
   FaHome,
   FaUser,
@@ -28,7 +25,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -69,10 +65,6 @@ const Navbar = () => {
       }
     }
     setIsLoading(false);
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   const navVariants = {
@@ -156,18 +148,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Right Side - Social Links & Theme Toggle */}
+            {/* Right Side - Social Links */}
             <div className="flex items-center space-x-4">
-              {/* Theme Toggle */}
-              <motion.button
-                onClick={toggleTheme}
-                className="p-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
-                whileHover={{ scale: 1.1, rotate: 180 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                {theme === 'dark' ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
-              </motion.button>
-
               {/* Social Links - Desktop */}
               <div className="hidden md:flex items-center space-x-2">
                 <motion.a

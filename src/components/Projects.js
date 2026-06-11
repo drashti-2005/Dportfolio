@@ -22,6 +22,22 @@ const Projects = () => {
   const featuredProjects = [
     {
       id: 1,
+      title: 'E-commerce Data Engineering Pipeline',
+      subtitle: 'End-to-End ETL & Data Warehouse',
+      description:
+        'An end-to-end data engineering pipeline built on the Olist Brazilian E-commerce dataset. Extracts raw CSV data, transforms and cleans it into a star-schema data warehouse, and loads it into PostgreSQL. Performs large-scale revenue analytics with Apache Spark (PySpark), exporting results to Parquet, and visualizes sales insights through an interactive Streamlit dashboard.',
+      image: '/Ecommerce-pipeline.png',
+      github: 'https://github.com/drashti-2005/ecommerce-data-engineering',
+      demo: '',
+      video: '',
+      tags: ['Python', 'PySpark', 'PostgreSQL', 'pandas', 'SQLAlchemy', 'Streamlit', 'Plotly', 'Parquet'],
+      category: 'Data Engineering',
+      status: 'Completed',
+      features: ['ETL Pipeline', 'Star-Schema Data Warehouse', 'PySpark Revenue Analytics', 'Data Quality Checks', 'Parquet Export', 'Streamlit Dashboard'],
+      gradient: 'from-orange-600 to-amber-600',
+    },
+    {
+      id: 2,
       title: 'Real-Time Chat Application',
       subtitle: 'Full-Stack Communication Platform',
       description:
@@ -35,22 +51,6 @@ const Projects = () => {
       status: 'Development',
       features: ['WebSocket Messaging', 'JWT Authentication', 'Private & Group Chats', 'MongoDB Storage', 'PWA Support', 'Real-time Typing Indicators'],
       gradient: 'from-green-600 to-teal-600',
-    },
-    {
-      id: 2,
-      title: 'Task Manager – Full Stack Web Application',
-      subtitle: 'Collaborative Task Management Platform',
-      description:
-        'Built a secure full-stack task management platform with role-based access control, team collaboration, and multi-workspace support. Implemented JWT-based authentication, task CRUD operations, analytics dashboard, and activity logging using MongoDB Atlas. Designed RESTful APIs using Express.js and developed a responsive user interface with React and Tailwind CSS.',
-      image: '/task_manager.jpg',
-      github: 'https://github.com/drashti-2005/task-manager',
-      demo: '',
-      video: '',
-      tags: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
-      category: 'Full-Stack',
-      status: 'Development',
-      features: ['Role-Based Access Control', 'Team Collaboration', 'Analytics Dashboard', 'Activity Logging', 'Multi-Workspace Support', 'RESTful API'],
-      gradient: 'from-purple-600 to-pink-600',
     },
     {
       id: 3,
