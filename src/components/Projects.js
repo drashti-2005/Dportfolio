@@ -18,6 +18,22 @@ import {
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
+  const [expandedTags, setExpandedTags] = useState({});
+
+  const toggleDescription = (id) => {
+    setExpandedDescriptions(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const toggleTags = (id) => {
+    setExpandedTags(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const featuredProjects = [
     {
@@ -36,22 +52,56 @@ const Projects = () => {
       features: ['ETL Pipeline', 'Star-Schema Data Warehouse', 'PySpark Revenue Analytics', 'Data Quality Checks', 'Parquet Export', 'Streamlit Dashboard'],
       gradient: 'from-orange-600 to-amber-600',
     },
+
     {
       id: 2,
-      title: 'Real-Time Chat Application',
-      subtitle: 'Full-Stack Communication Platform',
+      title: 'Real-Time CDC Data Pipeline',
+      subtitle: 'Production-Grade Change Data Capture & Event Streaming',
       description:
-        'Built a real-time chat platform using Go backend with WebSocket-driven messaging and JWT authentication. Implemented React.js frontend with Tailwind CSS for responsive UI. Features private and group chat routing with MongoDB for persistent storage, Context API for state management, and PWA support for offline functionality.',
-      image: '/chat-app.png',
-      github: 'https://github.com/drashti-2005/realtime-chat-app',
+        'A production-ready CDC (Change Data Capture) pipeline that captures real-time database changes from PostgreSQL using WAL logical decoding, streams events through Apache Kafka with exactly-once semantics, archives data to MinIO object storage, and replicates to target PostgreSQL. Features comprehensive data quality validation, multi-region support with automatic failover, security with encryption and RBAC, and complete observability through Prometheus and Grafana. Includes automated CI/CD pipeline with GitHub Actions, comprehensive testing (unit/integration/performance), and supports 10,000+ events/sec throughput with <100ms latency.',
+      image: '/cdc-pipeline.png',
+      github: 'https://github.com/drashti-2005/cdc-pipeline',
       demo: '',
       video: '',
-      tags: ['Go', 'React.js', 'WebSockets', 'MongoDB', 'JWT', 'Tailwind CSS', 'Vite', 'PWA'],
-      category: 'Real-Time App',
-      status: 'Development',
-      features: ['WebSocket Messaging', 'JWT Authentication', 'Private & Group Chats', 'MongoDB Storage', 'PWA Support', 'Real-time Typing Indicators'],
-      gradient: 'from-green-600 to-teal-600',
+      tags: [
+        'Python',
+        'PostgreSQL',
+        'Apache Kafka',
+        'MinIO',
+        'Docker',
+        'Prometheus',
+        'Grafana',
+        'Avro',
+        'dbt',
+        'Airflow',
+        'pytest',
+        'GitHub Actions',
+        'KRaft',
+        'Pydantic',
+        'SQLAlchemy'
+      ],
+      category: 'Data Engineering',
+      status: 'Completed',
+      features: [
+        'WAL-Based CDC Capture',
+        'Event Streaming (Kafka)',
+        'Exactly-Once Semantics',
+        'Data Quality Framework',
+        'Dead Letter Queue (DLQ)',
+        'MinIO Archival (Bronze Layer)',
+        'Target DB Replication',
+        'Multi-Region Failover',
+        'Schema Evolution (Avro)',
+        'Encryption & RBAC',
+        'Prometheus Metrics',
+        'Grafana Dashboards',
+        'CI/CD Automation',
+        'Load Testing (10K events/sec)',
+        'Comprehensive Testing Suite'
+      ],
+      gradient: 'from-blue-600 to-cyan-600',
     },
+    
     {
       id: 3,
       title: 'Employee Performance Appraisal System (E-PAS)',
@@ -68,6 +118,7 @@ const Projects = () => {
       features: ['Performance Reviews', 'Employee Management', 'Workflow Automation', 'Appraisal Tracking', 'MongoDB Integration', 'Modern UI/UX'],
       gradient: 'from-blue-600 to-cyan-600',
     },
+    
   ];
 
   const containerVariants = {
@@ -168,7 +219,7 @@ const Projects = () => {
               onMouseLeave={() => setHoveredProject(null)}
             >
               <motion.div
-                className="h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-500 relative"
+                className="h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-500 relative flex flex-col"
                 variants={cardVariants}
                 whileHover="hover"
               >
@@ -176,7 +227,7 @@ const Projects = () => {
                 <div className="absolute top-4 right-4 z-20">
                   <motion.span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Live' 
+                      project.status === 'Live' || project.status === 'Completed'
                         ? 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-400' 
                         : 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-400'
                     }`}
@@ -185,7 +236,7 @@ const Projects = () => {
                     transition={{ delay: index * 0.1 + 0.3 }}
                   >
                     <div className={`w-2 h-2 rounded-full mr-2 ${
-                      project.status === 'Live' ? 'bg-green-500' : 'bg-orange-500'
+                      project.status === 'Live' || project.status === 'Completed' ? 'bg-green-500' : 'bg-orange-500'
                     } ${project.status === 'Live' ? 'animate-pulse' : ''}`} />
                     {project.status}
                   </motion.span>
@@ -259,7 +310,7 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 flex-grow flex flex-col">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}
@@ -269,15 +320,30 @@ const Projects = () => {
                     </p>
                   </div>
 
-                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
+                  {/* Description with Read More */}
+                  <div className="flex-grow">
+                    <p className={`text-gray-600 dark:text-gray-300 text-sm leading-relaxed ${
+                      !expandedDescriptions[project.id] && project.description.length > 150 
+                        ? 'line-clamp-3' 
+                        : ''
+                    }`}>
+                      {project.description}
+                    </p>
+                    {project.description.length > 150 && (
+                      <button
+                        onClick={() => toggleDescription(project.id)}
+                        className="text-blue-600 dark:text-blue-400 text-xs font-medium mt-1 hover:underline"
+                      >
+                        {expandedDescriptions[project.id] ? 'Show Less' : 'Read More'}
+                      </button>
+                    )}
+                  </div>
 
-                  {/* Features */}
+                  {/* Features - Limited Display */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300">Key Features:</h4>
                     <div className="flex flex-wrap gap-1">
-                      {project.features.map((feature, featureIndex) => (
+                      {project.features.slice(0, 4).map((feature, featureIndex) => (
                         <span
                           key={featureIndex}
                           className="inline-flex items-center px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-md text-xs"
@@ -286,14 +352,19 @@ const Projects = () => {
                           {feature}
                         </span>
                       ))}
+                      {project.features.length > 4 && (
+                        <span className="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-700 text-blue-600 dark:text-blue-300 rounded-md text-xs font-medium">
+                          +{project.features.length - 4} more
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  {/* Tech Stack */}
+                  {/* Tech Stack - Collapsible */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
+                      {(expandedTags[project.id] ? project.tags : project.tags.slice(0, 5)).map((tag, tagIndex) => (
                         <motion.span
                           key={tagIndex}
                           className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-medium"
@@ -305,36 +376,53 @@ const Projects = () => {
                           {tag}
                         </motion.span>
                       ))}
+                      {project.tags.length > 5 && (
+                        <button
+                          onClick={() => toggleTags(project.id)}
+                          className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-xs font-medium hover:shadow-md transition-all"
+                        >
+                          {expandedTags[project.id] ? 'Show Less' : `+${project.tags.length - 5} More`}
+                        </button>
+                      )}
                     </div>
                   </div>
 
-                  {/* Action Links */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <div className="flex items-center space-x-4">
+                  {/* Action Buttons */}
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex gap-3 mt-auto">
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-200 text-sm font-medium"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <FaGithub className="w-4 h-4" />
+                      Code
+                    </motion.a>
+
+                    {project.demo ? (
                       <motion.a
-                        href={project.github}
+                        href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                       >
-                        <FaGithub className="w-5 h-5" />
+                        <FaExternalLinkAlt className="w-3.5 h-3.5" />
+                        Live Demo
                       </motion.a>
-
-                      {project.demo && (
-                        <motion.a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <FaEye className="w-5 h-5" />
-                        </motion.a>
-                      )}
-                    </div>
+                    ) : (
+                      <motion.button
+                        onClick={handleUnavailableClick}
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg cursor-not-allowed text-sm font-medium"
+                        whileHover={{ scale: 1.01 }}
+                      >
+                        <FaExternalLinkAlt className="w-3.5 h-3.5" />
+                        Demo N/A
+                      </motion.button>
+                    )}
                   </div>
                 </div>
               </motion.div>

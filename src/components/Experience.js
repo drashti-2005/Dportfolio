@@ -10,7 +10,7 @@ const Experience = () => {
     { name: "Docker", icon: FaDocker, color: "text-blue-500" },
     { name: "Data Engineering", icon: FaDatabase, color: "text-orange-500" },
     { name: "Database Design", icon: FaDatabase, color: "text-green-600" },
-    { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" }
+      { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" }
   ];
 
   const readyToContribute = [
