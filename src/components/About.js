@@ -26,7 +26,7 @@ const About = () => {
     },
     { 
       label: 'CGPA', 
-      value: '8.09 / 10',
+      value: '8.26 / 10',
       icon: FaGraduationCap,
       color: 'text-green-600 dark:text-green-400'
     },
@@ -139,17 +139,16 @@ const About = () => {
                   </p>
                   
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                    Experienced in developing full-stack software and web applications with a focus on{' '}
+                    Experienced in building full-stack applications, with a growing focus on{' '}
                     <span className="font-semibold text-purple-600 dark:text-purple-400">backend development</span>,{' '}
                     <span className="font-semibold text-orange-600 dark:text-orange-400">data engineering</span>, and{' '}
                     <span className="font-semibold text-indigo-600 dark:text-indigo-400">scalable system design</span>.
                   </p>
                   
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                    Skilled in backend frameworks (Express.js) and modern frontend 
-                    technologies (React, Next.js, Tailwind CSS), along with data tools like 
-                    PySpark, pandas, and PostgreSQL. Experienced with ETL pipelines, database design, 
-                    RESTful API development, JWT authentication, and Docker containerization.
+                    I work with Express.js, React, and Next.js to build full-stack applications, and use Python,
+                    PySpark, pandas, PostgreSQL, and Kafka for backend services and data pipelines. My project
+                    experience includes ETL workflows, database design, REST APIs, JWT authentication, and Docker.
                   </p>
                   
                   <motion.div 
@@ -159,8 +158,8 @@ const About = () => {
                   >
                     <FaQuoteRight className="text-blue-600 dark:text-blue-400 text-2xl mb-4" />
                     <p className="text-gray-700 dark:text-gray-300 font-medium italic">
-                      &ldquo;Proven ability to design and deploy full-stack applications with modern tech stacks, 
-                      implementing secure authentication, real-time features, and scalable architectures.&rdquo;
+                      &ldquo;Interested in building reliable backend systems and data pipelines, backed by hands-on
+                      full-stack project experience.&rdquo;
                     </p>
                   </motion.div>
                 </div>
@@ -294,7 +293,7 @@ const About = () => {
           {[
             { number: "10+", label: "Projects Completed", icon: "🚀" },
             { number: "3+", label: "Years of Coding", icon: "⌨️" },
-            { number: "8.09", label: "CGPA", icon: "🎓" },
+            { number: "8.26", label: "CGPA", icon: "🎓" },
             { number: "100%", label: "Dedication", icon: "💯" }
           ].map((stat, index) => (
             <motion.div

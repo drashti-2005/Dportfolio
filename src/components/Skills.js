@@ -15,6 +15,7 @@ import {
   FaTools,
   FaServer,
   FaCloud,
+  FaChartLine,
   FaChevronDown,
   FaChevronUp
 } from 'react-icons/fa';
@@ -46,67 +47,90 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'Backend Engineering & APIs',
       skills: [
-        { name: 'C', icon: SiCplusplus, color: 'from-blue-600 to-blue-800' },
-        { name: 'C++', icon: SiCplusplus, color: 'from-blue-700 to-purple-700' },
-        { name: 'Java', icon: FaJava, color: 'from-red-500 to-orange-500' },
-        { name: 'Python', icon: FaPython, color: 'from-blue-500 to-yellow-500' },
-        { name: 'JavaScript', icon: FaJs, color: 'from-yellow-400 to-yellow-600' },
-        { name: 'TypeScript', icon: SiTypescript, color: 'from-blue-600 to-blue-800' },
-        { name: 'Go', icon: SiGo, color: 'from-blue-400 to-cyan-400' },
-      ],
-      icon: FaCode,
-      color: 'from-blue-500 to-purple-600',
-      description: 'Proficient in multiple programming languages with strong foundations'
-    },
-    {
-      title: 'Frameworks & Libraries',
-      skills: [
-        { name: 'React.js', icon: FaReact, color: 'from-cyan-400 to-blue-500' },
-        { name: 'Next.js', icon: SiNextdotjs, color: 'from-gray-700 to-black' },
+        { name: 'Node.js', icon: FaNode, color: 'from-green-500 to-green-700' },
         { name: 'Express.js', icon: SiExpress, color: 'from-gray-700 to-gray-900' },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'from-cyan-400 to-blue-500' },
-      ],
-      icon: FaTools,
-      color: 'from-green-500 to-teal-600',
-      description: 'Modern frameworks for building scalable applications'
-    },
-    {
-      title: 'DevOps & Tools',
-      skills: [
-        { name: 'Docker', icon: FaDocker, color: 'from-blue-500 to-blue-700' },
-        { name: 'Git', icon: FaGit, color: 'from-orange-500 to-red-500' },
-        { name: 'Ubuntu', icon: SiUbuntu, color: 'from-orange-500 to-red-500' },
-        { name: 'Postman', icon: SiPostman, color: 'from-orange-500 to-red-500' },
+        { name: 'REST API Design', icon: FaServer, color: 'from-blue-500 to-cyan-600' },
+        { name: 'SQLAlchemy', icon: FaDatabase, color: 'from-red-500 to-orange-500' },
+        { name: 'Pydantic', icon: FaCode, color: 'from-purple-500 to-indigo-600' },
+        { name: 'JWT Authentication', icon: FaServer, color: 'from-indigo-500 to-blue-600' },
+        { name: 'WebSockets', icon: FaServer, color: 'from-cyan-500 to-blue-600' },
       ],
       icon: FaServer,
-      color: 'from-purple-500 to-pink-600',
-      description: 'Tools for development, deployment, and system administration'
+      color: 'from-blue-500 to-cyan-600',
+      description: 'Building backend services, REST APIs, and real-time application features'
     },
     {
-      title: 'Databases',
+      title: 'Data Engineering',
       skills: [
-        { name: 'MySQL', icon: SiMysql, color: 'from-blue-600 to-orange-500' },
-        { name: 'MongoDB', icon: SiMongodb, color: 'from-green-500 to-green-700' },
-        { name: 'PostgreSQL', icon: SiPostgresql, color: 'from-blue-600 to-blue-800' },
-      ],
-      icon: FaDatabase,
-      color: 'from-orange-500 to-red-600',
-      description: 'Database systems for data storage and management'
-    },
-    {
-      title: 'Data Engineering & Analytics',
-      skills: [
+        { name: 'Apache Kafka', icon: FaServer, color: 'from-gray-700 to-gray-900' },
         { name: 'Apache Spark', icon: SiApachespark, color: 'from-orange-500 to-red-500' },
         { name: 'PySpark', icon: SiApachespark, color: 'from-orange-400 to-amber-500' },
+        { name: 'Apache Airflow', icon: FaTools, color: 'from-cyan-500 to-blue-600' },
+        { name: 'dbt', icon: FaDatabase, color: 'from-orange-500 to-red-500' },
+        { name: 'MinIO', icon: FaCloud, color: 'from-red-500 to-pink-500' },
+        { name: 'Parquet', icon: FaDatabase, color: 'from-blue-600 to-purple-600' },
         { name: 'pandas', icon: SiPandas, color: 'from-purple-600 to-indigo-700' },
         { name: 'Streamlit', icon: SiStreamlit, color: 'from-red-500 to-pink-500' },
         { name: 'Plotly', icon: SiPlotly, color: 'from-indigo-500 to-purple-600' },
       ],
       icon: FaDatabase,
       color: 'from-amber-500 to-orange-600',
-      description: 'Building ETL pipelines, data warehouses, and large-scale analytics'
+      description: 'Creating ETL pipelines, streaming workflows, and analytics from raw data to insights'
+    },
+    {
+      title: 'Databases & Data Warehousing',
+      skills: [
+        { name: 'PostgreSQL', icon: SiPostgresql, color: 'from-blue-600 to-blue-800' },
+        { name: 'MySQL', icon: SiMysql, color: 'from-blue-600 to-orange-500' },
+        { name: 'MongoDB', icon: SiMongodb, color: 'from-green-500 to-green-700' },
+        { name: 'Star-Schema Modeling', icon: FaDatabase, color: 'from-orange-500 to-red-600' },
+      ],
+      icon: FaDatabase,
+      color: 'from-orange-500 to-red-600',
+      description: 'Designing relational and document databases, including warehouse-ready data models'
+    },
+    {
+      title: 'Programming Languages',
+      skills: [
+        { name: 'Python', icon: FaPython, color: 'from-blue-500 to-yellow-500' },
+        { name: 'JavaScript', icon: FaJs, color: 'from-yellow-400 to-yellow-600' },
+        { name: 'TypeScript', icon: SiTypescript, color: 'from-blue-600 to-blue-800' },
+        { name: 'Java', icon: FaJava, color: 'from-red-500 to-orange-500' },
+        { name: 'Go', icon: SiGo, color: 'from-blue-400 to-cyan-400' },
+        { name: 'C', icon: SiCplusplus, color: 'from-blue-600 to-blue-800' },
+        { name: 'C++', icon: SiCplusplus, color: 'from-blue-700 to-purple-700' },
+      ],
+      icon: FaCode,
+      color: 'from-blue-500 to-purple-600',
+      description: 'Languages used across backend services, data workflows, and full-stack applications'
+    },
+    {
+      title: 'Full-Stack Development',
+      skills: [
+        { name: 'React.js', icon: FaReact, color: 'from-cyan-400 to-blue-500' },
+        { name: 'Next.js', icon: SiNextdotjs, color: 'from-gray-700 to-black' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'from-cyan-400 to-blue-500' },
+      ],
+      icon: FaTools,
+      color: 'from-green-500 to-teal-600',
+      description: 'Full-stack experience building user-facing applications alongside backend systems'
+    },
+    {
+      title: 'DevOps & Observability',
+      skills: [
+        { name: 'Docker', icon: FaDocker, color: 'from-blue-500 to-blue-700' },
+        { name: 'Git & GitHub', icon: FaGit, color: 'from-orange-500 to-red-500' },
+        { name: 'GitHub Actions', icon: FaGit, color: 'from-blue-500 to-purple-600' },
+        { name: 'Prometheus', icon: FaServer, color: 'from-orange-500 to-red-500' },
+        { name: 'Grafana', icon: FaChartLine, color: 'from-orange-400 to-amber-500' },
+        { name: 'Postman', icon: SiPostman, color: 'from-orange-500 to-red-500' },
+        { name: 'Ubuntu', icon: SiUbuntu, color: 'from-orange-500 to-red-500' },
+      ],
+      icon: FaTools,
+      color: 'from-purple-500 to-pink-600',
+      description: 'Containerization, CI/CD, API testing, and monitoring data systems'
     },
   ];
 
@@ -180,7 +204,7 @@ const Skills = () => {
             variants={itemVariants}
             className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
           >
-            A comprehensive toolkit of modern technologies and frameworks to build scalable, efficient solutions
+            Full-stack foundations with a strong focus on backend engineering and data pipelines
           </motion.p>
         </motion.div>
 
@@ -299,10 +323,10 @@ const Skills = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { number: "11+", label: "Languages & Frameworks", icon: "🚀" },
-            { number: "4+", label: "DevOps Tools", icon: "⚙️" },
-            { number: "3+", label: "Database Systems", icon: "🗄️" },
-            { number: "5+", label: "Data & Analytics Tools", icon: "📊" }
+            { number: "7+", label: "Programming Languages", icon: "🚀" },
+            { number: "7+", label: "Backend & API Skills", icon: "⚙️" },
+            { number: "10+", label: "Data Engineering Tools", icon: "📊" },
+            { number: "4+", label: "Database & Modeling Skills", icon: "🗄️" }
           ].map((stat, index) => (
             <motion.div
               key={index}

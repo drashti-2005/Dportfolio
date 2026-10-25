@@ -1,38 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaRocket, FaCode, FaUsers, FaGithub, FaDocker, FaGitAlt, FaDatabase, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaBriefcase, FaCode, FaUsers, FaDocker, FaGitAlt, FaDatabase, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Experience = () => {
   const skills = [
-    { name: "Full Stack Development", icon: FaCode, color: "text-blue-600" },
-    { name: "Git & GitHub", icon: FaGithub, color: "text-gray-800" },
-    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "Backend & REST APIs", icon: FaCode, color: "text-blue-600" },
     { name: "Data Engineering", icon: FaDatabase, color: "text-orange-500" },
-    { name: "Database Design", icon: FaDatabase, color: "text-green-600" },
-      { name: "Team Collaboration", icon: FaUsers, color: "text-purple-600" }
+    { name: "Databases & Data Modeling", icon: FaDatabase, color: "text-green-600" },
+    { name: "Full-Stack Development", icon: FaCode, color: "text-indigo-600" },
+    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "Git & Team Collaboration", icon: FaUsers, color: "text-purple-600" }
   ];
 
   const readyToContribute = [
     {
+      icon: FaDatabase,
+      title: "Data Engineering",
+      description: "Hands-on project experience building ETL workflows and a star-schema warehouse with Python, PySpark, pandas, and PostgreSQL, plus a CDC pipeline using Kafka."
+    },
+    {
       icon: FaCode,
-      title: "Full Stack Development",
-      description: "Proficient in building end-to-end applications using modern frameworks like React, Next.js, and Express.js with strong database management skills."
+      title: "Backend Engineering & APIs",
+      description: "Builds backend services and RESTful APIs with Express.js and Python, working with PostgreSQL and MongoDB, JWT authentication, and real-time features using WebSockets."
+    },
+    {
+      icon: FaDocker,
+      title: "Full-Stack Development",
+      description: "Full-stack project experience combining React and Next.js interfaces with backend services, databases, and Docker-based development workflows."
     },
     {
       icon: FaGitAlt,
-      title: "Version Control & Collaboration",
-      description: "Experienced with Git workflows, pull requests, code reviews, and collaborative development practices through hackathons and academic projects."
-    },
-    {
-      icon: FaRocket,
-      title: "Fast Learner & Problem Solver",
-      description: "Demonstrated ability to quickly learn new technologies and frameworks. Participated in multiple hackathons including Smart India Hackathon 2025 Grand Finale."
-    },
-    {
-      icon: FaDatabase,
-      title: "Data Engineering & Backend Development",
-      description: "Strong foundation in building ETL pipelines and star-schema data warehouses with PySpark, pandas, and PostgreSQL, along with RESTful API design, JWT authentication, and real-time features using WebSockets."
+      title: "Collaboration & Problem Solving",
+      description: "Uses Git and GitHub in project work and hackathons, including participation in the Smart India Hackathon 2025 Grand Finale; enjoys learning tools and solving practical engineering problems."
     }
   ];
 
@@ -86,7 +86,7 @@ const Experience = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Actively seeking full-time opportunities to contribute and grow as a Full Stack Developer
+            Actively seeking opportunities in backend and data engineering, bringing full-stack project experience
           </p>
         </motion.div>
 
@@ -116,8 +116,8 @@ const Experience = () => {
                 Open to Full-Time Opportunities
               </h3>
               <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-                Information Technology Engineering student with strong full-stack development skills, 
-                seeking opportunities to make an impact
+                Information Technology Engineering student with hands-on backend, data engineering, and full-stack
+                project experience, seeking opportunities to build useful systems
               </p>
               <div className="flex items-center justify-center gap-3 mt-6">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">

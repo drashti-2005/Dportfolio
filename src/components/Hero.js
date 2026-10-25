@@ -207,7 +207,7 @@ const Hero = () => {
                   animate={{ opacity: [1, 0.7, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  Full Stack Developer
+                  Full-Stack Developer | Backend & Data Engineering
                 </motion.span>
               </motion.div>
             </motion.div>
@@ -217,12 +217,11 @@ const Hero = () => {
               className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl"
               variants={itemVariants}
             >
-              Passionate Information Technology Engineering student specializing in{' '}
-              <span className="font-semibold text-blue-600 dark:text-blue-400">Full Stack Development</span>,{' '}
-              <span className="font-semibold text-green-600 dark:text-green-400">Backend Engineering</span>,{' '}
-              <span className="font-semibold text-purple-600 dark:text-purple-400">Data Engineering</span>, and{' '}
-              <span className="font-semibold text-orange-600 dark:text-orange-400">RESTful APIs</span>.
-              Currently studying at Vishwakarma Government Engineering College.
+              Information Technology Engineering student with full-stack project experience and a strong interest in{' '}
+              <span className="font-semibold text-green-600 dark:text-green-400">backend engineering</span> and{' '}
+              <span className="font-semibold text-purple-600 dark:text-purple-400">data engineering</span>. I build{' '}
+              <span className="font-semibold text-orange-600 dark:text-orange-400">REST APIs</span> and data pipelines
+              with Python, PostgreSQL, PySpark, and Kafka.
             </motion.p>
 
             {/* Skills Icons */}
@@ -294,7 +293,7 @@ const Hero = () => {
               {[
                 { number: "10+", label: "Projects" },
                 { number: "3+", label: "Years Coding" },
-                { number: "8.09", label: "CGPA" }
+                { number: "8.26", label: "CGPA" }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
